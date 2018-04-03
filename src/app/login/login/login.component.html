@@ -1,0 +1,39 @@
+<div class="login">
+  <div class="login-container">
+    <div class="login-header text-center">
+      Angular Client Sample
+    </div>
+
+    <div class="login-content">
+      <form (keyup.enter)="onLoginClick()">
+        <mat-form-field class="full-width">
+          <input matInput
+                 type="email"
+                 [(ngModel)]="user.email"
+                 placeholder="Email"
+                 name="email">
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <input matInput
+                 [(ngModel)]="user.password"
+                 [type]="hidePassword ? 'password' : 'text'"
+                 placeholder="Password"
+                 name="password">
+          <mat-icon matSuffix
+                    (click)="hidePassword = !hidePassword">
+            {{hidePassword ? 'visibility' : 'visibility_off'}}
+          </mat-icon>
+        </mat-form-field>
+      </form>
+
+      <div class="text-center">
+        <button mat-raised-button
+                (click)="onLoginClick()"
+                class="login-button">
+          Login
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
