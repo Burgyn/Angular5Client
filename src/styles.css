@@ -4,15 +4,15 @@
 html {
     min-height: 100%;
     margin: 0;
-  }
+}
 
-  body {
+body {
     min-height: 100%;
     margin: 0;
     background-color: #eee;
-  }
+    font-family: Roboto;
+}
 
-
-  .full-width {
+.full-width {
     width: 100%;
-  }
+}

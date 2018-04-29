@@ -1,0 +1,37 @@
+<div>
+    <mat-list role="list"
+              dense>
+        <h3 mat-subheader>People</h3>
+        <mat-list-item *ngFor="let person of people; let i=index"
+                       role="listitem"
+                       (click)="onSelectedIndexChanged(i)"
+                       [ngClass]="{'selected': isSelected(i)}">
+            <h3 mat-line>{{person.firstName}} {{person.lastName}}</h3>
+            <p mat-line>{{person.email}}</p>
+            <span *ngIf="isSelected(i)">
+                <table>
+                    <tr>
+                        <td>
+                            <button mat-icon-button
+                                    (click)="onEditPersonClick()">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                        </td>
+                        <td>
+                            <button mat-icon-button
+                                    (click)="onDeletePersonClick()">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </span>
+        </mat-list-item>
+    </mat-list>
+</div>
+
+<button mat-fab
+        class="button-add"
+        (click)="onAddPersonClick()">
+    <mat-icon>add</mat-icon>
+</button>
