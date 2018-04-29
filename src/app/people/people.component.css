@@ -1,0 +1,9 @@
+.selected {
+    background-color: #dcdcdc;
+}
+
+.button-add {
+    bottom: 24px;
+    right: 24px;
+    position: absolute;
+}

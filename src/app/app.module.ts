@@ -11,12 +11,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login/login.component';
 import { PeopleComponent } from './people/people.component';
 import { PeopleService } from './people/people.service';
+import { PersonDialogComponent } from './person-dialog/person-dialog.component';
+import { PersonDeleteDialogComponent } from './person-delete-dialog/person-delete-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    PeopleComponent
+    PeopleComponent,
+    PersonDialogComponent,
+    PersonDeleteDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,10 @@ import { PeopleService } from './people/people.service';
     HttpClientModule
   ],
   providers: [PeopleService],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+    PersonDialogComponent,
+    PersonDeleteDialogComponent
+  ]
 })
 export class AppModule { }
