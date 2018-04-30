@@ -6,35 +6,28 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './shared/material.module';
+import { PeopleModule } from './people/people.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login/login.component';
-import { PeopleComponent } from './people/people.component';
-import { PeopleService } from './people/people.service';
-import { PersonDialogComponent } from './person-dialog/person-dialog.component';
-import { PersonDeleteDialogComponent } from './person-delete-dialog/person-delete-dialog.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    PeopleComponent,
-    PersonDialogComponent,
-    PersonDeleteDialogComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MaterialModule,
-    FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule,
+    PeopleModule
   ],
-  providers: [PeopleService],
+  providers: [],
   bootstrap: [
-    AppComponent,
-    PersonDialogComponent,
-    PersonDeleteDialogComponent
+    AppComponent
   ]
 })
 export class AppModule { }

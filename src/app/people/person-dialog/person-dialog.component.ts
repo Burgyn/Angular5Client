@@ -1,7 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { PeopleService } from '../people/people.service';
-import { Person } from '../people/person.model';
+
+import { PeopleService } from '../shared/people.service';
+import { Person } from '../shared/person.model';
 
 @Component({
     templateUrl: './person-dialog.component.html',
