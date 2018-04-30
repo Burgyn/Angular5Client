@@ -25,7 +25,7 @@ export class PersonDialogComponent implements OnInit {
     private getPersonCopy(person: Person): Person {
         const personTemp = new Person();
 
-        if (person !== undefined) {
+        if (person !== null) {
             personTemp.id = person.id;
             personTemp.firstName = person.firstName;
             personTemp.lastName = person.lastName;
