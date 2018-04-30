@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatList, MatListOptionChange, MatDialog } from '@angular/material';
-import { PeopleService } from './people.service';
-import { Person } from './person.model';
-import { PersonDialogComponent } from '../person-dialog/person-dialog.component';
-import { PersonDeleteDialogComponent } from '../person-delete-dialog/person-delete-dialog.component';
+
+import { Person } from './shared/person.model';
+import { PeopleService } from './shared/people.service';
+import { PersonDialogComponent } from './person-dialog/person-dialog.component';
+import { PersonDeleteDialogComponent } from './person-delete-dialog/person-delete-dialog.component';
 
 @Component({
     selector: 'app-people',
